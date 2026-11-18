@@ -1,0 +1,32 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> pattern-todos@0.0.0 test
+> vitest run
+
+
+ RUN  v5.1.1 /home/sahana/My_files/Code Research/code best patterns
+
+ ❯ src/utils/meetingTime.test.ts (10 tests | 1 failed) 52ms
+   ❯ formatMeetingRange (1)
+     × includes end date when end is on a different day 7ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/utils/meetingTime.test.ts > formatMeetingRange > includes end date when end is on a different day
+TypeError: formatMeetingRange is not a function
+ ❯ src/utils/meetingTime.test.ts:98:19
+     96|     const start = new Date(2026, 10, 5, 10, 0, 0).getTime()
+     97|     const end = new Date(2026, 10, 7, 11, 0, 0).getTime()
+     98|     const label = formatMeetingRange(start, end)
+       |                   ^
+     99|     expect(label).toMatch(/Nov/)
+    100|     expect(label).toMatch(/5/)
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 15 passed (16)
+   Start at  15:01:48
+   Duration  415ms (transform 43%, tests 27%, import 23%, worker 7%)
+

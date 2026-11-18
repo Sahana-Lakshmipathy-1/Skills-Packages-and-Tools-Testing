@@ -1,0 +1,53 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> pattern-todos@0.0.0 test
+> vitest run
+
+
+ RUN  v5.1.1 /home/sahana/My_files/Code Research/code best patterns
+
+ ❯ src/utils/meetingStorage.test.ts (0 test)
+[vitest-pool]: Failed to terminate forks worker for test files /home/sahana/My_files/Code Research/code best patterns/src/utils/meetingStorage.test.ts. Error: kill EACCES
+    at ChildProcess.kill (node:internal/child_process:536:26)
+    at ForksPoolWorker.stop (file:///home/sahana/My_files/Code%20Research/code%20best%20patterns/node_modules/vitest/dist/chunks/index.ER9afepi.js:5626:8)
+    at file:///home/sahana/My_files/Code%20Research/code%20best%20patterns/node_modules/vitest/dist/chunks/index.ER9afepi.js:5410:118
+    at Traces.$ (file:///home/sahana/My_files/Code%20Research/code%20best%20patterns/node_modules/vitest/dist/traces.js:143:27)
+    at PoolRunner.stop (file:///home/sahana/My_files/Code%20Research/code%20best%20patterns/node_modules/vitest/dist/chunks/index.ER9afepi.js:5410:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'kill'
+}
+[vitest-pool]: Failed to terminate forks worker for test files /home/sahana/My_files/Code Research/code best patterns/src/utils/meetingTime.test.ts. Error: kill EACCES
+    at ChildProcess.kill (node:internal/child_process:536:26)
+    at ForksPoolWorker.stop (file:///home/sahana/My_files/Code%20Research/code%20best%20patterns/node_modules/vitest/dist/chunks/index.ER9afepi.js:5626:8)
+    at file:///home/sahana/My_files/Code%20Research/code%20best%20patterns/node_modules/vitest/dist/chunks/index.ER9afepi.js:5410:118
+    at Traces.$ (file:///home/sahana/My_files/Code%20Research/code%20best%20patterns/node_modules/vitest/dist/traces.js:143:27)
+    at PoolRunner.stop (file:///home/sahana/My_files/Code%20Research/code%20best%20patterns/node_modules/vitest/dist/chunks/index.ER9afepi.js:5410:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'kill'
+}
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/utils/meetingStorage.test.ts [ src/utils/meetingStorage.test.ts ]
+Error: Cannot find module './meetingStorage' imported from /home/sahana/My_files/Code Research/code best patterns/src/utils/meetingStorage.test.ts
+ ❯ src/utils/meetingStorage.test.ts:2:1
+      1| import { describe, expect, it } from 'vitest'
+      2| import { parseStoredMeetings } from './meetingStorage'
+       | ^
+      3|
+      4| describe('parseStoredMeetings', () => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  9 passed (9)
+   Start at  14:57:43
+   Duration  453ms (transform 39%, tests 32%, import 17%, worker 12%, environment 1%)
+
+[vitest-pool]: Timeout terminating forks worker for test files /home/sahana/My_files/Code Research/code best patterns/src/utils/meetingStorage.test.ts.
+[vitest-pool]: Timeout terminating forks worker for test files /home/sahana/My_files/Code Research/code best patterns/src/utils/meetingTime.test.ts.

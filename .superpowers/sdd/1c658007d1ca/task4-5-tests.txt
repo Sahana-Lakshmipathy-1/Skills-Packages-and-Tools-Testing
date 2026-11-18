@@ -1,0 +1,14 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> pattern-todos@0.0.0 test
+> vitest run
+
+
+ RUN  v5.1.1 /home/sahana/My_files/Code Research/code best patterns
+
+
+ Test Files  2 passed (2)
+      Tests  15 passed (15)
+   Start at  14:59:17
+   Duration  339ms (tests 39%, import 30%, transform 19%, worker 11%)
+

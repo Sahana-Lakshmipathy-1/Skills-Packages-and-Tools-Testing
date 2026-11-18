@@ -1,0 +1,41 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> pattern-todos@0.0.0 test
+> vitest run
+
+
+ RUN  v5.1.1 /home/sahana/My_files/Code Research/code best patterns
+
+ ❯ src/utils/meetingTime.test.ts (0 test)
+[vitest-pool]: Failed to terminate forks worker for test files /home/sahana/My_files/Code Research/code best patterns/src/utils/meetingTime.test.ts. Error: kill EACCES
+    at ChildProcess.kill (node:internal/child_process:536:26)
+    at ForksPoolWorker.stop (file:///home/sahana/My_files/Code%20Research/code%20best%20patterns/node_modules/vitest/dist/chunks/index.ER9afepi.js:5626:8)
+    at file:///home/sahana/My_files/Code%20Research/code%20best%20patterns/node_modules/vitest/dist/chunks/index.ER9afepi.js:5410:118
+    at Traces.$ (file:///home/sahana/My_files/Code%20Research/code%20best%20patterns/node_modules/vitest/dist/traces.js:143:27)
+    at PoolRunner.stop (file:///home/sahana/My_files/Code%20Research/code%20best%20patterns/node_modules/vitest/dist/chunks/index.ER9afepi.js:5410:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'kill'
+}
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/utils/meetingTime.test.ts [ src/utils/meetingTime.test.ts ]
+Error: Cannot find module './meetingTime' imported from /home/sahana/My_files/Code Research/code best patterns/src/utils/meetingTime.test.ts
+ ❯ src/utils/meetingTime.test.ts:2:1
+      1| import { describe, expect, it } from 'vitest'
+      2| import {
+       | ^
+      3|   filterAndSortCurrentMonth,
+      4|   formatMonthLabel,
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  no tests
+   Start at  14:56:53
+   Duration  390ms (worker 96%, environment 4%)
+
+[vitest-pool]: Timeout terminating forks worker for test files /home/sahana/My_files/Code Research/code best patterns/src/utils/meetingTime.test.ts.
