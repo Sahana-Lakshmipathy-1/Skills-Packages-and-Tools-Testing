@@ -1,0 +1,1551 @@
+{
+  "errors": [],
+  "generated_at": "2026-11-19T05:30:53Z",
+  "metrics": {
+    "./alert_priority_rule_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 4,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 4,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 490,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./approval_management_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 430,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./assignee_list_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 36,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./audit_monitoring_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 3,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 3,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 877,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./automation_internal_templates_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 393,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./azure_server_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 218,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./bulk_upload.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 320,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./categories_management_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 258,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./ci_management_crud.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 180,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./customer_automation_settings_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 412,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./customer_designation_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 12,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 12,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 465,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./customer_escalation_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 5,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 5,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 672,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./customer_escalation_notification_settings.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 3,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 3,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 288,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./db_operations.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 92,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./err_handler.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 31,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./internal_assignee_group_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 259,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./internal_designation_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 2,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 2,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 419,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./lambda_function.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 9,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 9,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1784,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./monitoring_tool_mgmt.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 244,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./notification_template_mgmt.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 198,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./role_master_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 371,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./state_management_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 1,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 429,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./user_management_handlers.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 2,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 2,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 777,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 47,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 47,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 9643,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "17     company_row = db_result2(\n18         f\"\"\"\n19         SELECT company\n20         FROM itsmdb.user_login\n21         WHERE email_id = %s AND {ACTIVE_USER_SQL}\n22         \"\"\",\n23         (working_user,),\n",
+      "col_offset": 12,
+      "end_col_offset": 32,
+      "filename": "./alert_priority_rule_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 18,
+      "line_range": [
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "35     customer_row = db_result2(\n36         f\"\"\"\n37         SELECT customer\n38         FROM itsmdb.customer_management\n39         WHERE id = %s AND delete_status IS NOT TRUE\n40         \"\"\",\n41         (customer_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 8,
+      "filename": "./alert_priority_rule_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 36,
+      "line_range": [
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "193         rows = db_result2(\n194             f\"\"\"\n195             SELECT\n196                 r.id,\n197                 r.customer_id,\n198                 c.customer,\n199                 r.keyword,\n200                 r.match_type,\n201                 r.ticket_priority\n202             FROM itsmdb.alert_priority_rule r\n203             INNER JOIN itsmdb.customer_management c\n204                 ON c.id = r.customer_id\n205             WHERE r.customer_id = %s\n206                 AND r.delete_status IS FALSE\n207                 AND c.delete_status IS NOT TRUE\n208                 {extra_sql}\n209             ORDER BY r.created_at DESC\n210             \"\"\",\n211             (scoped_customer_id, *extra_params),\n",
+      "col_offset": 16,
+      "end_col_offset": 16,
+      "filename": "./alert_priority_rule_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 194,
+      "line_range": [
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "232         rows = db_result2(\n233             f\"\"\"\n234             SELECT id, keyword, match_type, ticket_priority\n235             FROM itsmdb.alert_priority_rule\n236             WHERE delete_status IS FALSE\n237               AND customer_id IS NULL\n238               {extra_sql_global}\n239             ORDER BY created_at DESC\n240             \"\"\",\n241             extra_params_global,\n",
+      "col_offset": 16,
+      "end_col_offset": 14,
+      "filename": "./alert_priority_rule_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 233,
+      "line_range": [
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "650     company_row = db_result2(\n651         f\"\"\"\n652         SELECT company\n653         FROM itsmdb.user_login\n654         WHERE email_id = %s AND {ACTIVE_USER_SQL}\n655         \"\"\",\n656         (working_user,),\n",
+      "col_offset": 12,
+      "end_col_offset": 32,
+      "filename": "./audit_monitoring_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 651,
+      "line_range": [
+        651,
+        652,
+        653,
+        654,
+        655
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "878     count_row = db_result2(\n879         f\"\"\"\n880         SELECT COUNT(*)\n881         FROM itsmdb.audit_log\n882         {where_sql}\n883         \"\"\",\n884         params,\n",
+      "col_offset": 12,
+      "end_col_offset": 8,
+      "filename": "./audit_monitoring_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 879,
+      "line_range": [
+        879,
+        880,
+        881,
+        882,
+        883
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "889     rows = db_result2(\n890         f\"\"\"\n891         SELECT\n892             id,\n893             occurred_at,\n894             actor_email,\n895             actor_type,\n896             module,\n897             action,\n898             action_category,\n899             entity_type,\n900             entity_id,\n901             company,\n902             status,\n903             summary,\n904             payload,\n905             changes,\n906             source_lambda\n907         FROM itsmdb.audit_log\n908         {where_sql}\n909         ORDER BY occurred_at DESC, id DESC\n910         LIMIT %s OFFSET %s\n911         \"\"\",\n912         (*params, limit, offset),\n",
+      "col_offset": 12,
+      "end_col_offset": 8,
+      "filename": "./audit_monitoring_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 890,
+      "line_range": [
+        890,
+        891,
+        892,
+        893,
+        894,
+        895,
+        896,
+        897,
+        898,
+        899,
+        900,
+        901,
+        902,
+        903,
+        904,
+        905,
+        906,
+        907,
+        908,
+        909,
+        910,
+        911
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "365         row = db_result2(\n366             f\"\"\"\n367             UPDATE itsmdb.automation_internal_templates\n368             SET {\", \".join(set_clauses)}\n369             WHERE id = %s\n370               AND COALESCE(delete_status, FALSE) = FALSE\n371             RETURNING id\n372             \"\"\",\n373             tuple(values),\n",
+      "col_offset": 16,
+      "end_col_offset": 16,
+      "filename": "./automation_internal_templates_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 366,
+      "line_range": [
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "55         rows = db_result2(\n56             f'''\n57             SELECT id, {name_column}\n58             FROM {table}\n59             WHERE category = %s\n60               AND delete_status IS NOT TRUE\n61             ORDER BY {name_column} ASC\n62             ''',\n63             (category_id,)\n",
+      "col_offset": 16,
+      "end_col_offset": 23,
+      "filename": "./categories_management_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 56,
+      "line_range": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "69 \n70         count_query = f\"SELECT COUNT(*) FROM ({query}) as count_query\"\n71         total_count = db_result2(count_query, tuple(params), True)\n",
+      "col_offset": 24,
+      "end_col_offset": 46,
+      "filename": "./ci_management_crud.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 70,
+      "line_range": [
+        70
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "29     customer_row = db_result2(\n30         f\"\"\"\n31         SELECT customer\n32         FROM itsmdb.customer_management\n33         WHERE id = %s AND {ACTIVE_CUSTOMER_SQL}\n34         \"\"\",\n35         (customer_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 26,
+      "filename": "./customer_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 30,
+      "line_range": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "97     customer_exists = db_result2(\n98         f\"\"\"\n99         SELECT id\n100         FROM itsmdb.customer_management\n101         WHERE id = %s AND {ACTIVE_CUSTOMER_SQL}\n102         \"\"\",\n103         (customer_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 26,
+      "filename": "./customer_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 98,
+      "line_range": [
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "123     duplicate = db_result2(\n124         f\"\"\"\n125         SELECT id\n126         FROM itsmdb.customer_designation\n127         WHERE customer_id = %s\n128             AND LOWER(designation) = LOWER(%s)\n129             AND {ACTIVE_DESIGNATION_SQL}\n130         \"\"\",\n131         (customer_id, designation),\n",
+      "col_offset": 12,
+      "end_col_offset": 16,
+      "filename": "./customer_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 124,
+      "line_range": [
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "152     new_id_row = db_result2(\n153         f\"\"\"\n154         SELECT id\n155         FROM itsmdb.customer_designation\n156         WHERE customer_id = %s\n157             AND LOWER(designation) = LOWER(%s)\n158             AND {ACTIVE_DESIGNATION_SQL}\n159         ORDER BY id DESC\n160         LIMIT 1\n161         \"\"\",\n162         (customer_id, designation),\n",
+      "col_offset": 12,
+      "end_col_offset": 16,
+      "filename": "./customer_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 153,
+      "line_range": [
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "192     customer_row = db_result2(\n193         f\"\"\"\n194         SELECT customer\n195         FROM itsmdb.customer_management\n196         WHERE id = %s AND {ACTIVE_CUSTOMER_SQL}\n197         \"\"\",\n198         (customer_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 26,
+      "filename": "./customer_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 193,
+      "line_range": [
+        193,
+        194,
+        195,
+        196,
+        197
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "249     designation_row = db_result2(\n250         f\"\"\"\n251         SELECT id, customer_id, designation\n252         FROM itsmdb.customer_designation\n253         WHERE id = %s AND {ACTIVE_DESIGNATION_SQL}\n254         \"\"\",\n255         (designation_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 26,
+      "filename": "./customer_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 250,
+      "line_range": [
+        250,
+        251,
+        252,
+        253,
+        254
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "276     duplicate = db_result2(\n277         f\"\"\"\n278         SELECT id\n279         FROM itsmdb.customer_designation\n280         WHERE customer_id = %s\n281             AND LOWER(designation) = LOWER(%s)\n282             AND id <> %s\n283             AND {ACTIVE_DESIGNATION_SQL}\n284         \"\"\",\n285         (customer_id, designation, row_id),\n",
+      "col_offset": 12,
+      "end_col_offset": 16,
+      "filename": "./customer_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 277,
+      "line_range": [
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "297         customer_row = db_result2(\n298             f\"\"\"\n299             SELECT customer\n300             FROM itsmdb.customer_management\n301             WHERE id = %s AND {ACTIVE_CUSTOMER_SQL}\n302             \"\"\",\n303             (customer_id,),\n",
+      "col_offset": 16,
+      "end_col_offset": 30,
+      "filename": "./customer_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 298,
+      "line_range": [
+        298,
+        299,
+        300,
+        301,
+        302
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "369     designation_row = db_result2(\n370         f\"\"\"\n371         SELECT id, customer_id, designation\n372         FROM itsmdb.customer_designation\n373         WHERE id = %s AND {ACTIVE_DESIGNATION_SQL}\n374         \"\"\",\n375         (designation_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 26,
+      "filename": "./customer_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 370,
+      "line_range": [
+        370,
+        371,
+        372,
+        373,
+        374
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "452     customer_exists = db_result2(\n453         f\"\"\"\n454         SELECT id\n455         FROM itsmdb.customer_management\n456         WHERE id = %s AND {ACTIVE_CUSTOMER_SQL}\n457         \"\"\",\n458         (customer_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 26,
+      "filename": "./customer_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 453,
+      "line_range": [
+        453,
+        454,
+        455,
+        456,
+        457
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "479         rows = db_result2(\n480             f\"\"\"\n481             SELECT\n482                 id,\n483                 customer_id,\n484                 designation,\n485                 created_by,\n486                 created_at\n487             FROM itsmdb.customer_designation\n488             WHERE customer_id = %s\n489                 AND {ACTIVE_DESIGNATION_SQL}\n490                 AND designation ILIKE %s\n491             ORDER BY designation ASC\n492             \"\"\",\n493             (customer_id, f\"%{search_term}%\"),\n",
+      "col_offset": 16,
+      "end_col_offset": 20,
+      "filename": "./customer_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 480,
+      "line_range": [
+        480,
+        481,
+        482,
+        483,
+        484,
+        485,
+        486,
+        487,
+        488,
+        489,
+        490,
+        491,
+        492
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "496         rows = db_result2(\n497             f\"\"\"\n498             SELECT\n499                 id,\n500                 customer_id,\n501                 designation,\n502                 created_by,\n503                 created_at\n504             FROM itsmdb.customer_designation\n505             WHERE customer_id = %s\n506                 AND {ACTIVE_DESIGNATION_SQL}\n507             ORDER BY designation ASC\n508             \"\"\",\n509             (customer_id,),\n",
+      "col_offset": 16,
+      "end_col_offset": 20,
+      "filename": "./customer_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 497,
+      "line_range": [
+        497,
+        498,
+        499,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "128     customer_row = db_result2(\n129         f\"\"\"\n130         SELECT customer\n131         FROM itsmdb.customer_management\n132         WHERE id = %s AND {ACTIVE_CUSTOMER_SQL}\n133         \"\"\",\n134         (customer_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 26,
+      "filename": "./customer_escalation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 129,
+      "line_range": [
+        129,
+        130,
+        131,
+        132,
+        133
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "197     customer_exists = db_result2(\n198         f\"\"\"\n199         SELECT id\n200         FROM itsmdb.customer_management\n201         WHERE id = %s AND {ACTIVE_CUSTOMER_SQL}\n202         \"\"\",\n203         (customer_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 26,
+      "filename": "./customer_escalation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 198,
+      "line_range": [
+        198,
+        199,
+        200,
+        201,
+        202
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "215     rows = db_result2(\n216         f\"\"\"\n217         SELECT\n218             r.id,\n219             r.customer_id,\n220             c.customer,\n221             r.priority,\n222             r.response_escalation,\n223             r.resolution_escalation,\n224             r.internal_designation_ids,\n225             r.internal_stakeholders,\n226             r.customer_spoc_designation_ids,\n227             r.customer_spocs\n228         FROM itsmdb.customer_escalation_rule r\n229         INNER JOIN itsmdb.customer_management c\n230             ON c.id = r.customer_id\n231         WHERE r.customer_id = %s\n232             AND r.delete_status = 0\n233             AND c.{ACTIVE_CUSTOMER_SQL}\n234         ORDER BY r.priority ASC\n235         \"\"\",\n236         (customer_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 18,
+      "filename": "./customer_escalation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 216,
+      "line_range": [
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "318     customer_exists = db_result2(\n319         f\"\"\"\n320         SELECT id\n321         FROM itsmdb.customer_management\n322         WHERE id = %s AND {ACTIVE_CUSTOMER_SQL}\n323         \"\"\",\n324         (customer_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 26,
+      "filename": "./customer_escalation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 319,
+      "line_range": [
+        319,
+        320,
+        321,
+        322,
+        323
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "720     customer_row = db_result2(\n721         f\"\"\"\n722         SELECT customer\n723         FROM itsmdb.customer_management\n724         WHERE id = %s AND {ACTIVE_CUSTOMER_SQL}\n725         \"\"\",\n726         (customer_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 26,
+      "filename": "./customer_escalation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 721,
+      "line_range": [
+        721,
+        722,
+        723,
+        724,
+        725
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "33     row = db_result2(\n34         f\"\"\"\n35         SELECT company\n36         FROM itsmdb.user_login\n37         WHERE email_id = %s AND {ACTIVE_USER_SQL}\n38         \"\"\",\n39         (working_user,),\n",
+      "col_offset": 12,
+      "end_col_offset": 32,
+      "filename": "./customer_escalation_notification_settings.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 34,
+      "line_range": [
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "52     row = db_result2(\n53         f\"\"\"\n54         SELECT customer\n55         FROM itsmdb.customer_management\n56         WHERE id = %s AND {ACTIVE_CUSTOMER_SQL}\n57         \"\"\",\n58         (customer_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 26,
+      "filename": "./customer_escalation_notification_settings.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 53,
+      "line_range": [
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "67     row = db_result2(\n68         f\"\"\"\n69         SELECT id\n70         FROM itsmdb.customer_management\n71         WHERE id = %s AND {ACTIVE_CUSTOMER_SQL}\n72         \"\"\",\n73         (customer_id,),\n",
+      "col_offset": 12,
+      "end_col_offset": 26,
+      "filename": "./customer_escalation_notification_settings.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 68,
+      "line_range": [
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "66     rows = db_result2(\n67         f\"\"\"\n68         SELECT id, assignee_group, group_code, created_by, created_at\n69         FROM itsmdb.internal_assignee_group\n70         WHERE delete_status = 0\n71             {search_sql}\n72         ORDER BY COALESCE(updated_at, created_at) DESC, id DESC\n73         \"\"\",\n74         tuple(search_params),\n",
+      "col_offset": 12,
+      "end_col_offset": 12,
+      "filename": "./internal_assignee_group_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 67,
+      "line_range": [
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "81     rows = db_result2(\n82         f\"\"\"\n83         SELECT id, group_code\n84         FROM itsmdb.internal_assignee_group\n85         WHERE delete_status = 0\n86           AND LOWER(group_code) IN ({placeholders})\n87         \"\"\",\n88         tuple(code.lower() for code in group_codes),\n",
+      "col_offset": 12,
+      "end_col_offset": 36,
+      "filename": "./internal_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 82,
+      "line_range": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "160     rows = db_result2(\n161         f\"\"\"\n162         SELECT\n163             d.id,\n164             d.designation,\n165             d.created_by,\n166             d.created_at,\n167             COALESCE(\n168                 array_agg(g.group_code ORDER BY LOWER(g.group_code))\n169                 FILTER (WHERE g.group_code IS NOT NULL),\n170                 ARRAY[]::varchar[]\n171             ) AS assignee_group_codes\n172         FROM itsmdb.internal_designation d\n173         LEFT JOIN itsmdb.internal_designation_assignee_group dag\n174             ON dag.internal_designation_id = d.id\n175            AND dag.delete_status = 0\n176         LEFT JOIN itsmdb.internal_assignee_group g\n177             ON g.id = dag.internal_assignee_group_id\n178            AND g.delete_status = 0\n179         WHERE d.delete_status = 0\n180             {search_sql}\n181         GROUP BY d.id, d.designation, d.created_by, d.created_at\n182         ORDER BY d.created_at DESC\n183         \"\"\",\n184         tuple(search_params),\n",
+      "col_offset": 12,
+      "end_col_offset": 12,
+      "filename": "./internal_designation_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 161,
+      "line_range": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "171 def cutsomer_name_list(working_user):\n172     query = f'''\n173         SELECT\n174             delete_status,\n175             customer,\n176             working_user,\n177             id,\n178             logo_uri,\n179             monitoring_tools\n180         FROM itsmdb.customer_management\n181         WHERE {ACTIVE_CUSTOMER_SQL}\n182     '''\n183     company = db_result2(\n",
+      "col_offset": 16,
+      "end_col_offset": 14,
+      "filename": "./lambda_function.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 172,
+      "line_range": [
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "289 \n290     query = f'''\n291         SELECT DISTINCT {column}\n292         FROM itsmdb.ci_database\n293         WHERE delete_status IS NOT TRUE\n294           AND {column} IS NOT NULL\n295           AND TRIM({column}) <> ''\n296     '''\n297     values = []\n",
+      "col_offset": 16,
+      "end_col_offset": 24,
+      "filename": "./lambda_function.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 290,
+      "line_range": [
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "321             email_id = event['body']['email_id']    \n322             query = f'''SELECT EXISTS (\n323                         SELECT 1\n324                         FROM itsmdb.user_login\n325                         WHERE email_id = '{email_id}'\n326                     ) AS record_exists;\n327             '''\n328             print(query)\n",
+      "col_offset": 24,
+      "end_col_offset": 42,
+      "filename": "./lambda_function.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 322,
+      "line_range": [
+        322,
+        323,
+        324,
+        325,
+        326,
+        327
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "359         \n360             query = f'''SELECT * FROM itsmdb.user_login WHERE lower(company)=lower('{company_name}') and email_id='{email_id}'and delete_status = 0;'''\n361             print(query)\n",
+      "col_offset": 24,
+      "end_col_offset": 84,
+      "filename": "./lambda_function.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 360,
+      "line_range": [
+        360
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "409             print(email_id,\"email_id\")\n410             query = f'''SELECT * FROM itsmdb.user_login WHERE email_id='{email_id}'and password_hash='{password_hash}' and delete_status = 0;'''\n411             print(query)\n",
+      "col_offset": 24,
+      "end_col_offset": 72,
+      "filename": "./lambda_function.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 410,
+      "line_range": [
+        410
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "437         \n438             query = f'''SELECT * FROM itsmdb.user_login WHERE email_id='{email_id}'and password_hash='{password_hash}';'''\n439             result_1 = db_result(query)\n",
+      "col_offset": 24,
+      "end_col_offset": 72,
+      "filename": "./lambda_function.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 438,
+      "line_range": [
+        438
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "766             else:\n767                 db_result1(f\"\"\"\n768                     UPDATE itsmdb.ext_emails\n769                     SET csat_followup = %s\n770                     WHERE ticket_id = %s;\n771                 \"\"\", (csat_followup, ticket_id))\n772                 # cursor.connection.commit()\n",
+      "col_offset": 31,
+      "end_col_offset": 16,
+      "filename": "./lambda_function.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 767,
+      "line_range": [
+        767,
+        768,
+        769,
+        770,
+        771
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "1124                     )\n1125                     query = f'''SELECT * FROM itsmdb.user_login WHERE email_id='{email}' and delete_status = 0;'''\n1126                     result_1 = db_result(query)\n",
+      "col_offset": 32,
+      "end_col_offset": 80,
+      "filename": "./lambda_function.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 1125,
+      "line_range": [
+        1125
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "1200                     # print(\"challenge_response\",challenge_response)\n1201                     query = f'''SELECT * FROM itsmdb.user_login WHERE email_id='{email}' and delete_status = 0;'''\n1202                     result_1 = db_result(query)\n",
+      "col_offset": 32,
+      "end_col_offset": 80,
+      "filename": "./lambda_function.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 1201,
+      "line_range": [
+        1201
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "171 \n172     query = f\"\"\"\n173         UPDATE itsmdb.notification_templates\n174         SET {\", \".join(set_clauses)}\n175         WHERE id = %s AND COALESCE(delete_status, FALSE) = FALSE\n176         RETURNING id;\n177     \"\"\"\n178     values.append(template_id)\n",
+      "col_offset": 16,
+      "end_col_offset": 12,
+      "filename": "./notification_template_mgmt.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 172,
+      "line_range": [
+        172,
+        173,
+        174,
+        175,
+        176,
+        177
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "105     rows = db_result2(\n106         f\"\"\"\n107         SELECT id, role_name, s3_path, created_by, created_at\n108         FROM itsmdb.role_master\n109         WHERE delete_status = 0\n110         {search_sql}\n111         ORDER BY COALESCE(updated_at, created_at) DESC, id DESC\n112         \"\"\",\n113         tuple(search_params),\n",
+      "col_offset": 12,
+      "end_col_offset": 8,
+      "filename": "./role_master_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 106,
+      "line_range": [
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "113         row = db_result2(\n114             f\"\"\"\n115             SELECT COUNT(*)::int,\n116                    (ARRAY_AGG(ticket_id ORDER BY ticket_id))[1:5]\n117             FROM {table}\n118             WHERE LOWER(TRIM(COALESCE({status_col}, ''))) = LOWER(TRIM(%s))\n119               {soft_delete_clause}\n120             \"\"\",\n121             (state_key,), True,\n",
+      "col_offset": 16,
+      "end_col_offset": 17,
+      "filename": "./state_management_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 114,
+      "line_range": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "378 \n379             group_query = f\"\"\"\n380                 SELECT\n381                     id,\n382                     assignee_group\n383                 FROM itsmdb.internal_assignee_group\n384                 WHERE id IN ({placeholders})\n385                   AND delete_status = 0\n386             \"\"\"\n387 \n",
+      "col_offset": 30,
+      "end_col_offset": 29,
+      "filename": "./user_management_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 379,
+      "line_range": [
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "405 \n406         query = f\"\"\"\n407             SELECT\n408                 ul.id,\n409                 ul.email_id,\n410                 ul.name,\n411                 ul.user_role,\n412                 ul.company,\n413                 ul.assignee_group,\n414                 ul.created_by,\n415                 ul.phone_number,\n416                 ul.internal_designation_id,\n417                 COALESCE(id.designation, ul.designation) AS designation\n418             FROM itsmdb.user_login ul\n419             LEFT JOIN itsmdb.internal_designation id\n420                 ON id.id = ul.internal_designation_id\n421                 AND id.delete_status = 0\n422             WHERE {where_sql}\n423             ORDER BY ul.id DESC\n424         \"\"\"\n425 \n",
+      "col_offset": 20,
+      "end_col_offset": 18,
+      "filename": "./user_management_handlers.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 406,
+      "line_range": [
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    }
+  ]
+}
