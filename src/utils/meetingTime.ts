@@ -48,6 +48,18 @@ export function formatMonthLabel(now: number = Date.now()): string {
   }).format(new Date(now))
 }
 
+export function parseMeetingFormInput(data: FormData): {
+  title: string
+  start: number
+  end: number
+} {
+  return {
+    title: String(data.get('title') ?? ''),
+    start: new Date(String(data.get('start') ?? '')).getTime(),
+    end: new Date(String(data.get('end') ?? '')).getTime(),
+  }
+}
+
 export function formatMeetingRange(start: number, end: number): string {
   const startDate = new Date(start)
   const endDate = new Date(end)

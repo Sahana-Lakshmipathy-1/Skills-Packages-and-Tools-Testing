@@ -15,7 +15,8 @@ import type {
   TodoFilter,
   TodoItem,
 } from '../types/todo'
-import { filterFromSearch, searchFromFilter } from '../utils/filterFromSearch'
+import { filterFromSearch } from '../utils/filterFromSearch'
+import { schedulePersist } from '../utils/persistDebounce'
 import { createTodoId, loadTodos, saveTodos } from '../utils/todoStorage'
 
 const UNDO_MS = 5000
@@ -26,7 +27,7 @@ type TodoState = {
   pendingUndo: PendingUndo | null
 }
 
-type TodoActions = {
+export type TodoActions = {
   add: (text: string) => void
   toggle: (id: string) => void
   remove: (id: string) => void
@@ -40,12 +41,18 @@ type TodoMeta = {
   visibleTodos: TodoItem[]
 }
 
-export type TodoContextValue = {
+export type TodoDataValue = {
   state: TodoState
-  actions: TodoActions
   meta: TodoMeta
 }
 
+export type TodoContextValue = TodoDataValue & {
+  actions: TodoActions
+}
+
+export const TodoDataContext = createContext<TodoDataValue | null>(null)
+export const TodoActionsContext = createContext<TodoActions | null>(null)
+/** Combined context for callers that need state + actions together. */
 export const TodoContext = createContext<TodoContextValue | null>(null)
 
 function deriveCounts(todos: TodoItem[]): TodoCounts {
@@ -74,8 +81,19 @@ export function TodoProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     todosRef.current = todos
-    saveTodos(todos)
   }, [todos])
+
+  useEffect(
+    () => schedulePersist(() => saveTodos(todosRef.current)),
+    [todos],
+  )
+
+  useEffect(
+    () => () => {
+      saveTodos(todosRef.current)
+    },
+    [],
+  )
 
   useEffect(() => {
     if (!pendingUndo) return
@@ -128,8 +146,11 @@ export function TodoProvider({ children }: { children: ReactNode }) {
   const setFilter = useCallback(
     (next: TodoFilter) => {
       startTransition(() => {
-        const search = searchFromFilter(next)
-        setSearchParams(search ? { filter: next } : {}, { replace: true })
+        if (next === 'all') {
+          setSearchParams({}, { replace: true })
+          return
+        }
+        setSearchParams({ filter: next }, { replace: true })
       })
     },
     [setSearchParams],
@@ -154,32 +175,35 @@ export function TodoProvider({ children }: { children: ReactNode }) {
     setPendingUndo(null)
   }, [])
 
+  const actions = useMemo<TodoActions>(
+    () => ({ add, toggle, remove, setFilter, undoRemove, dismissUndo }),
+    [add, toggle, remove, setFilter, undoRemove, dismissUndo],
+  )
+
   const counts = useMemo(() => deriveCounts(todos), [todos])
   const visibleTodos = useMemo(
     () => filterTodos(todos, filter),
     [todos, filter],
   )
 
-  const value = useMemo<TodoContextValue>(
+  const data = useMemo<TodoDataValue>(
     () => ({
       state: { todos, filter, pendingUndo },
-      actions: { add, toggle, remove, setFilter, undoRemove, dismissUndo },
       meta: { counts, visibleTodos },
     }),
-    [
-      todos,
-      filter,
-      pendingUndo,
-      add,
-      toggle,
-      remove,
-      setFilter,
-      undoRemove,
-      dismissUndo,
-      counts,
-      visibleTodos,
-    ],
+    [todos, filter, pendingUndo, counts, visibleTodos],
   )
 
-  return <TodoContext value={value}>{children}</TodoContext>
+  const value = useMemo<TodoContextValue>(
+    () => ({ ...data, actions }),
+    [data, actions],
+  )
+
+  return (
+    <TodoActionsContext value={actions}>
+      <TodoDataContext value={data}>
+        <TodoContext value={value}>{children}</TodoContext>
+      </TodoDataContext>
+    </TodoActionsContext>
+  )
 }

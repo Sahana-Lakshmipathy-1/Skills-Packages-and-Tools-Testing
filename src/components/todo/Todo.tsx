@@ -1,17 +1,15 @@
-import type { FormEvent, ReactNode } from 'react'
+import { memo, type FormEvent, type ReactNode } from 'react'
 import type { TodoFilter, TodoItem } from '../../types/todo'
-import { useTodoContext } from '../../hooks/useTodoContext'
+import { useTodoActions, useTodoContext } from '../../hooks/useTodoContext'
+import {
+  PatternEmpty,
+  PatternFrame,
+  PatternList,
+} from '../pattern/PatternShell'
 import { PlusIcon, TrashIcon } from '../icons'
 
 function Frame({ children }: { children: ReactNode }) {
-  return (
-    <section
-      aria-labelledby="todo-heading"
-      className="mx-auto flex w-full max-w-xl flex-col gap-6"
-    >
-      {children}
-    </section>
-  )
+  return <PatternFrame labelledBy="todo-heading">{children}</PatternFrame>
 }
 
 function Heading({ children }: { children: ReactNode }) {
@@ -34,14 +32,14 @@ function Heading({ children }: { children: ReactNode }) {
 }
 
 function Form() {
-  const { actions } = useTodoContext()
+  const { add } = useTodoActions()
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const form = event.currentTarget
     const data = new FormData(form)
     const text = String(data.get('todo') ?? '')
-    actions.add(text)
+    add(text)
     form.reset()
   }
 
@@ -129,27 +127,20 @@ function Filters() {
 }
 
 function List({ children }: { children: ReactNode }) {
-  return (
-    <ul className="flex list-none flex-col gap-2 p-0" aria-label="Task list">
-      {children}
-    </ul>
-  )
+  return <PatternList label="Task list">{children}</PatternList>
 }
 
-function Item({ todo }: { todo: TodoItem }) {
-  const { actions } = useTodoContext()
+const Item = memo(function Item({ todo }: { todo: TodoItem }) {
+  const { toggle, remove } = useTodoActions()
   const checkboxId = `todo-${todo.id}`
 
   return (
-    <li
-      className="ui-panel flex items-center gap-3 px-3 py-2 transition-colors duration-200 hover:border-border-strong"
-      style={{ contentVisibility: 'auto', containIntrinsicSize: '0 56px' }}
-    >
+    <li className="list-row ui-panel flex items-center gap-3 px-3 py-2 transition-colors duration-200 hover:border-border-strong">
       <input
         id={checkboxId}
         type="checkbox"
         checked={todo.completed}
-        onChange={() => actions.toggle(todo.id)}
+        onChange={() => toggle(todo.id)}
         className="size-5 shrink-0 cursor-pointer accent-primary"
       />
       <label
@@ -164,7 +155,7 @@ function Item({ todo }: { todo: TodoItem }) {
       <button
         type="button"
         aria-label={`Delete “${todo.text}”`}
-        onClick={() => actions.remove(todo.id)}
+        onClick={() => remove(todo.id)}
         className="ui-btn-danger"
       >
         <TrashIcon size={18} />
@@ -172,17 +163,10 @@ function Item({ todo }: { todo: TodoItem }) {
       </button>
     </li>
   )
-}
+})
 
 function Empty({ children }: { children: ReactNode }) {
-  return (
-    <div
-      role="status"
-      className="rounded-xl border border-dashed border-border-strong bg-bg-elevated/50 px-4 py-12 text-center text-ink-muted"
-    >
-      <p className="mx-auto max-w-sm text-base leading-relaxed">{children}</p>
-    </div>
-  )
+  return <PatternEmpty>{children}</PatternEmpty>
 }
 
 function UndoToast() {

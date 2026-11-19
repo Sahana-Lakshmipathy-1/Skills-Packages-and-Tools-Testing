@@ -1,6 +1,6 @@
 # Architecture Log — Pattern Todos
 
-This document records **why** the app was built this way: the decisions, the thought process, what each Vercel skill contributed, how those rules showed up in code, how a later feature (meeting planner) was added with [obra/superpowers](https://github.com/obra/superpowers), how the UI was later revamped with [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill), and how [Playwright](https://playwright.dev/docs/intro) was added for a simple end-to-end site demo.
+This document records **why** the app was built this way: the decisions, the thought process, what each Vercel skill contributed, how those rules showed up in code, how a later feature (meeting planner) was added with [obra/superpowers](https://github.com/obra/superpowers), how the UI was later revamped with [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill), how [Playwright](https://playwright.dev/docs/intro) was added for a simple end-to-end site demo, and how [c0x12c/ai-toolkit](https://github.com/c0x12c/ai-toolkit) (Spartan) was used to find AI slop / non-scaling patterns and harden the codebase.
 
 ---
 
@@ -41,7 +41,7 @@ BrowserRouter
 └─ AppShell (skip link, header, main)
    ├─ /           → TodoProvider → TodoPage → Todo.* compound UI
    ├─ /meetings   → MeetingProvider → MeetingPage → Meeting.* compound UI
-   └─ /about      → AboutPage (documents the skills in plain language)
+   └─ /about      → AboutPage (product summary; skill → code mapping lives in this log)
 ```
 
 **Thought process:**
@@ -439,7 +439,102 @@ npx playwright test --reporter=list
 
 ---
 
-## 12. Bottom line
+## 12. Spartan AI Toolkit (c0x12c/ai-toolkit) — slop scan + harden
+
+After Semgrep and the feature/UI passes, the brief was: **use [c0x12c/ai-toolkit](https://github.com/c0x12c/ai-toolkit) (Spartan)** to find AI slop and code that would not scale, then install the toolkit and fix what Gate 3.5 flagged.
+
+### What Spartan is (and is not)
+
+Spartan is an **engineering discipline layer for AI agents** — slash commands, markdown rules, skills, quality gates, and a dual-agent `phase-reviewer` — not a deterministic regex “slop scanner” like aislop/slop-scan.
+
+Relevant pieces we used:
+
+| Piece | Role |
+| --- | --- |
+| `/spartan:gate-review` | Gate 3.5: builder self-check + separate reviewer must both accept |
+| `/spartan:fe-review` | Frontend checklist (TS strictness, component size, a11y, perf) |
+| `agents/phase-reviewer` | SOLID / clean code / no unnecessary complexity / no copy-paste |
+| `rules/frontend-react/FRONTEND.md` | Build check, null safety, form/API patterns |
+| `templates/quality-gates.md` | Spec → plan → build → dual review → ship |
+
+### How we installed it
+
+```bash
+npx @c0x12c/ai-toolkit@latest --local --agent=claude-code --packs=frontend-react
+```
+
+| Attempt | Result |
+| --- | --- |
+| `--agent=cursor` → `.cursor/rules/` | **Blocked** — project `.cursor` is a read-only mount in this environment |
+| `--agent=claude-code` → `.claude/` | **Succeeded** — commands, rules, skills, `phase-reviewer`, assembled `CLAUDE.md` |
+
+Installer also appended `.spartan/ai.env` to `.gitignore` (API keys for optional design tooling).
+
+Installed locally under `.claude/`:
+
+- **37 commands** (core + frontend-react), including `gate-review`, `fe-review`, `pr-ready`, `js-security`
+- **4 rules** — `core/NAMING_CONVENTIONS`, `TIMEZONE`, `SKILL_AUTHORING`, `frontend-react/FRONTEND`
+- **2 skills** — `browser-qa`, `js-security-audit`
+- **1 agent** — `phase-reviewer`
+
+### What the Gate 3.5 review found
+
+Verdict: **NEEDS CHANGES**. Reviewer focused on duplication, monolithic context re-renders, and sync I/O — not style nits.
+
+| Severity | Finding |
+| --- | --- |
+| HIGH | Every list `Item` subscribed to the full `{ state, actions, meta }` value → one toggle re-rendered all rows |
+| MEDIUM | Near-clone `todoStorage` / `meetingStorage` and `Todo.*` / `Meeting.*` shells |
+| MEDIUM | `localStorage.setItem` on every mutation (including toggles / undo) |
+| MEDIUM | `MeetingContext.add` closed over `meetings` → unstable `actions` + O(n) conflict scan |
+| MEDIUM | Dead API (`clearFormError`, unused `CheckIcon`) |
+| MEDIUM | Date parsing lived in `Meeting.Form`; inline `style={{ contentVisibility }}`; no `strict` in app tsconfig |
+| MEDIUM | About page read as a skill manifesto (“AI slop” demo copy), not product About |
+
+**What was already clean:** route-scoped providers, typed models (no `any`), overlap rules in pure utils + Vitest, thin page composers, a11y basics (labels, alert focus, skip link).
+
+### What we changed in code (after install)
+
+| Finding | Fix |
+| --- | --- |
+| Duplicate storage | `src/utils/versionedStorage.ts` + thin domain wrappers |
+| Full list re-renders | Split `*ActionsContext` / `*DataContext`; `memo` on `Todo.Item` / `Meeting.Item`; `useTodoActions` / `useMeetingActions` |
+| Storage thrash | `schedulePersist` (300ms debounce) + flush on unmount |
+| Unstable `add` | `meetingsRef` + stable `useCallback` with `[]` deps |
+| Shared shells | `src/components/pattern/PatternShell.tsx` (`PatternFrame` / `List` / `Empty`) |
+| Form parsing in UI | `parseMeetingFormInput` in `meetingTime.ts` (+ test) |
+| Inline style | `.list-row` in `index.css` (`content-visibility` + intrinsic size) |
+| Dead code | Removed `clearFormError` and `CheckIcon` |
+| About slop | Product-facing copy (Tasks / Meetings / Local-first) |
+| Strict TS | `"strict": true` in `tsconfig.app.json` |
+| Vitest noise | `include: ['src/**/*.test.ts']` so Playwright specs are not picked up by `npm test` |
+
+### Verification
+
+```text
+npm test          → 17 passed (src unit tests)
+npm run build     → tsc -b + vite build OK
+npm run lint      → oxlint (existing compound-export fast-refresh warnings only)
+```
+
+### Thought process
+
+- Vercel skills taught *how to build*; Spartan taught *how to review what agents ship*.
+- Cursor install was preferred for this repo, but a RO `.cursor` mount made Claude Code’s local `.claude/` the workable install path — same rules/commands, different agent folder.
+- Fixes stayed surgical: keep `{ state, actions, meta }` and compound APIs; split subscription and dedupe storage so the teaching story scales instead of being rewritten.
+
+### Tradeoffs
+
+| Tradeoff | Rationale |
+| --- | --- |
+| Toolkit under `.claude/` not `.cursor/rules/` | Environment could not mkdir/write `.cursor/rules` |
+| Did not extract a full shared Heading | Domain headings differ (month label vs filter copy); only Frame/List/Empty were true clones |
+| Debounce 300ms, not idle-only | Simple, predictable; flush on unmount avoids lost writes |
+| Left `searchFromFilter` util exported | Still the inverse of `filterFromSearch`; setFilter now writes params directly |
+
+---
+
+## 13. Bottom line
 
 The app is intentionally small. Complexity was spent where the skills demand it:
 
@@ -449,5 +544,6 @@ The app is intentionally small. Complexity was spent where the skills demand it:
 - **Superpowers** decided that the meeting planner earned a written spec, a TDD plan, and a review gate before it counted as done.
 - **UI/UX Pro Max** decided the product palette, typography, touch/feedback polish, and form-error pattern — via a persisted design system, not ad-hoc restyling.
 - **Playwright** decided how we smoke-test the real site in a browser: tiny chromium e2e against home / add-task / nav, separate from Vitest utils.
+- **Spartan (ai-toolkit)** decided how we catch AI slop and non-scaling patterns: Gate 3.5 dual review → shared storage, split action context, debounced persist, and dead-code cleanup without abandoning the composition lesson.
 
 If you change the app later, prefer changes that keep those stories intact over adding features that need boolean props or orphan client state.

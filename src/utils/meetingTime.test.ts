@@ -7,6 +7,7 @@ import {
   isInCurrentMonth,
   isValidRange,
   meetingsOverlap,
+  parseMeetingFormInput,
 } from './meetingTime'
 import type { Meeting } from '../types/meeting'
 
@@ -99,5 +100,18 @@ describe('formatMeetingRange', () => {
     expect(label).toMatch(/Nov/)
     expect(label).toMatch(/5/)
     expect(label).toMatch(/7/)
+  })
+})
+
+describe('parseMeetingFormInput', () => {
+  it('reads title and datetime-local fields from FormData', () => {
+    const data = new FormData()
+    data.set('title', ' Sync ')
+    data.set('start', '2026-11-18T10:00')
+    data.set('end', '2026-11-18T11:00')
+    const parsed = parseMeetingFormInput(data)
+    expect(parsed.title).toBe(' Sync ')
+    expect(Number.isNaN(parsed.start)).toBe(false)
+    expect(parsed.end).toBeGreaterThan(parsed.start)
   })
 })

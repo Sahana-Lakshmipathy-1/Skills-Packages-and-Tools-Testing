@@ -9,5 +9,6 @@ export default defineConfig({
     environment: 'node',
     // Ruling: sandbox blocks fork worker kill (EACCES); threads avoid that.
     pool: 'threads',
+    include: ['src/**/*.test.ts'],
   },
 })

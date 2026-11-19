@@ -1,18 +1,22 @@
-import { useEffect, useRef, type FormEvent, type ReactNode } from 'react'
+import { memo, useEffect, useRef, type FormEvent, type ReactNode } from 'react'
 import type { Meeting as MeetingItem } from '../../types/meeting'
-import { useMeetingContext } from '../../hooks/useMeetingContext'
-import { formatMeetingRange } from '../../utils/meetingTime'
+import {
+  useMeetingActions,
+  useMeetingContext,
+} from '../../hooks/useMeetingContext'
+import {
+  formatMeetingRange,
+  parseMeetingFormInput,
+} from '../../utils/meetingTime'
+import {
+  PatternEmpty,
+  PatternFrame,
+  PatternList,
+} from '../pattern/PatternShell'
 import { CalendarIcon, PlusIcon, TrashIcon, WarningIcon } from '../icons'
 
 function Frame({ children }: { children: ReactNode }) {
-  return (
-    <section
-      aria-labelledby="meeting-heading"
-      className="mx-auto flex w-full max-w-xl flex-col gap-6"
-    >
-      {children}
-    </section>
-  )
+  return <PatternFrame labelledBy="meeting-heading">{children}</PatternFrame>
 }
 
 function Heading({ children }: { children: ReactNode }) {
@@ -40,7 +44,8 @@ function Heading({ children }: { children: ReactNode }) {
 }
 
 function Form() {
-  const { state, actions } = useMeetingContext()
+  const { state } = useMeetingContext()
+  const { add } = useMeetingActions()
   const errorRef = useRef<HTMLDivElement>(null)
   const hasError = Boolean(state.formError)
 
@@ -51,14 +56,7 @@ function Form() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const form = event.currentTarget
-    const data = new FormData(form)
-    const title = String(data.get('title') ?? '')
-    const startRaw = String(data.get('start') ?? '')
-    const endRaw = String(data.get('end') ?? '')
-    const start = new Date(startRaw).getTime()
-    const end = new Date(endRaw).getTime()
-
-    const ok = actions.add({ title, start, end })
+    const ok = add(parseMeetingFormInput(new FormData(form)))
     if (ok) form.reset()
   }
 
@@ -134,18 +132,14 @@ function Form() {
 }
 
 function List({ children }: { children: ReactNode }) {
-  return (
-    <ul className="flex list-none flex-col gap-2 p-0" aria-label="Meeting list">
-      {children}
-    </ul>
-  )
+  return <PatternList label="Meeting list">{children}</PatternList>
 }
 
-function Item({ meeting }: { meeting: MeetingItem }) {
-  const { actions } = useMeetingContext()
+const Item = memo(function Item({ meeting }: { meeting: MeetingItem }) {
+  const { remove } = useMeetingActions()
 
   return (
-    <li className="ui-panel flex items-center gap-3 px-3 py-3 transition-colors duration-200 hover:border-border-strong">
+    <li className="list-row ui-panel flex items-center gap-3 px-3 py-3 transition-colors duration-200 hover:border-border-strong">
       <div
         className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary-soft text-primary"
         aria-hidden="true"
@@ -161,7 +155,7 @@ function Item({ meeting }: { meeting: MeetingItem }) {
       <button
         type="button"
         aria-label={`Delete “${meeting.title}”`}
-        onClick={() => actions.remove(meeting.id)}
+        onClick={() => remove(meeting.id)}
         className="ui-btn-danger"
       >
         <TrashIcon size={18} />
@@ -169,17 +163,20 @@ function Item({ meeting }: { meeting: MeetingItem }) {
       </button>
     </li>
   )
-}
+})
 
 function Empty({ children }: { children: ReactNode }) {
   return (
-    <div
-      role="status"
-      className="rounded-xl border border-dashed border-border-strong bg-bg-elevated/50 px-4 py-12 text-center text-ink-muted"
+    <PatternEmpty
+      icon={
+        <CalendarIcon
+          size={28}
+          className="mx-auto mb-3 text-primary opacity-70"
+        />
+      }
     >
-      <CalendarIcon size={28} className="mx-auto mb-3 text-primary opacity-70" />
-      <p className="mx-auto max-w-sm text-base leading-relaxed">{children}</p>
-    </div>
+      {children}
+    </PatternEmpty>
   )
 }
 

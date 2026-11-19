@@ -1,14 +1,8 @@
 import type { TodoItem } from '../types/todo'
+import { createVersionedStorage } from './versionedStorage'
 
 const STORAGE_KEY = 'pattern-todos'
 const SCHEMA_VERSION = 1
-
-type StoredTodos = {
-  v: typeof SCHEMA_VERSION
-  todos: TodoItem[]
-}
-
-let cachedRead: TodoItem[] | null = null
 
 function isTodoItem(value: unknown): value is TodoItem {
   if (typeof value !== 'object' || value === null) return false
@@ -21,39 +15,19 @@ function isTodoItem(value: unknown): value is TodoItem {
   )
 }
 
+const storage = createVersionedStorage<TodoItem>({
+  key: STORAGE_KEY,
+  version: SCHEMA_VERSION,
+  collectionKey: 'todos',
+  isItem: isTodoItem,
+})
+
 export function loadTodos(): TodoItem[] {
-  if (cachedRead) return cachedRead
-
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    if (!raw) {
-      cachedRead = []
-      return cachedRead
-    }
-
-    const parsed: unknown = JSON.parse(raw)
-    if (
-      typeof parsed === 'object' &&
-      parsed !== null &&
-      (parsed as StoredTodos).v === SCHEMA_VERSION &&
-      Array.isArray((parsed as StoredTodos).todos)
-    ) {
-      const todos = (parsed as StoredTodos).todos.filter(isTodoItem)
-      cachedRead = todos
-      return todos
-    }
-  } catch {
-    // Ignore corrupt storage and start fresh.
-  }
-
-  cachedRead = []
-  return cachedRead
+  return storage.load()
 }
 
 export function saveTodos(todos: TodoItem[]): void {
-  const payload: StoredTodos = { v: SCHEMA_VERSION, todos }
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
-  cachedRead = todos
+  storage.save(todos)
 }
 
 export function createTodoId(): string {

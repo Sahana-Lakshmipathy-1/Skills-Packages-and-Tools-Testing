@@ -166,4 +166,10 @@
   .ui-label {
     @apply text-sm font-medium text-ink;
   }
+
+  /* Rough row height for content-visibility intrinsic size (~56px). */
+  .list-row {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 56px;
+  }
 }

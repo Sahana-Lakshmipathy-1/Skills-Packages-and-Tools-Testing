@@ -3,6 +3,7 @@ import {
   useCallback,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from 'react'
@@ -12,6 +13,7 @@ import {
   loadMeetings,
   saveMeetings,
 } from '../utils/meetingStorage'
+import { schedulePersist } from '../utils/persistDebounce'
 import {
   filterAndSortCurrentMonth,
   formatMonthLabel,
@@ -25,10 +27,9 @@ type MeetingState = {
   formError: string | null
 }
 
-type MeetingActions = {
+export type MeetingActions = {
   add: (input: { title: string; start: number; end: number }) => boolean
   remove: (id: string) => void
-  clearFormError: () => void
 }
 
 type MeetingMeta = {
@@ -36,21 +37,39 @@ type MeetingMeta = {
   monthLabel: string
 }
 
-export type MeetingContextValue = {
+export type MeetingDataValue = {
   state: MeetingState
-  actions: MeetingActions
   meta: MeetingMeta
 }
 
+export type MeetingContextValue = MeetingDataValue & {
+  actions: MeetingActions
+}
+
+export const MeetingDataContext = createContext<MeetingDataValue | null>(null)
+export const MeetingActionsContext = createContext<MeetingActions | null>(null)
 export const MeetingContext = createContext<MeetingContextValue | null>(null)
 
 export function MeetingProvider({ children }: { children: ReactNode }) {
   const [meetings, setMeetings] = useState<Meeting[]>(() => loadMeetings())
   const [formError, setFormError] = useState<string | null>(null)
+  const meetingsRef = useRef(meetings)
 
   useEffect(() => {
-    saveMeetings(meetings)
+    meetingsRef.current = meetings
   }, [meetings])
+
+  useEffect(
+    () => schedulePersist(() => saveMeetings(meetingsRef.current)),
+    [meetings],
+  )
+
+  useEffect(
+    () => () => {
+      saveMeetings(meetingsRef.current)
+    },
+    [],
+  )
 
   const add = useCallback(
     (input: { title: string; start: number; end: number }) => {
@@ -70,7 +89,12 @@ export function MeetingProvider({ children }: { children: ReactNode }) {
         setFormError('Start and end must be in the current month.')
         return false
       }
-      if (hasConflict(meetings, { start: input.start, end: input.end })) {
+      if (
+        hasConflict(meetingsRef.current, {
+          start: input.start,
+          end: input.end,
+        })
+      ) {
         setFormError('That time overlaps an existing meeting.')
         return false
       }
@@ -87,39 +111,42 @@ export function MeetingProvider({ children }: { children: ReactNode }) {
       setFormError(null)
       return true
     },
-    [meetings],
+    [],
   )
 
   const remove = useCallback((id: string) => {
     setMeetings((current) => current.filter((meeting) => meeting.id !== id))
   }, [])
 
-  const clearFormError = useCallback(() => {
-    setFormError(null)
-  }, [])
+  const actions = useMemo<MeetingActions>(
+    () => ({ add, remove }),
+    [add, remove],
+  )
 
   const visibleMeetings = useMemo(
     () => filterAndSortCurrentMonth(meetings),
     [meetings],
   )
-  const monthLabel = useMemo(() => formatMonthLabel(), [])
+  const monthLabel = formatMonthLabel()
 
-  const value = useMemo<MeetingContextValue>(
+  const data = useMemo<MeetingDataValue>(
     () => ({
       state: { meetings, formError },
-      actions: { add, remove, clearFormError },
       meta: { visibleMeetings, monthLabel },
     }),
-    [
-      meetings,
-      formError,
-      add,
-      remove,
-      clearFormError,
-      visibleMeetings,
-      monthLabel,
-    ],
+    [meetings, formError, visibleMeetings, monthLabel],
   )
 
-  return <MeetingContext value={value}>{children}</MeetingContext>
+  const value = useMemo<MeetingContextValue>(
+    () => ({ ...data, actions }),
+    [data, actions],
+  )
+
+  return (
+    <MeetingActionsContext value={actions}>
+      <MeetingDataContext value={data}>
+        <MeetingContext value={value}>{children}</MeetingContext>
+      </MeetingDataContext>
+    </MeetingActionsContext>
+  )
 }
